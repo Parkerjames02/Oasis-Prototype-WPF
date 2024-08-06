@@ -35,17 +35,95 @@
                 <Setter Property="HorizontalAlignment" Value="Center" />
             </Style>
         </TabControl.Resources>
-        <TabItem Header="Exercises" Width="195" >
-            <Label Content="Exercises" FontSize="30" HorizontalAlignment="Center" />
+        <TabItem Header="Exercise" Width="195" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="265*" />
+                    <ColumnDefinition Width="41*" />
+                    <ColumnDefinition Width="224*"/>
+                    <ColumnDefinition Width="265*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Exercise" FontSize="30" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" />
+                <Label Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,101,0,0" Grid.RowSpan="2" >
+                    <TextBlock TextAlignment="Center" FontSize="17">
+                    Follow exercises that only focus 
+                    <LineBreak/>
+                    <Run Text="on breathing techniques" />
+                    </TextBlock>
+                </Label>
+                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,101,0,0" Grid.RowSpan="2">Breathing Exercises</Button>
+                <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                    <TextBlock TextAlignment="Center" FontSize="17">
+                    Follow exercises that you can do
+                    <LineBreak/>
+                    <Run Text="while sitting in your chair" />
+                    </TextBlock>
+                </Label>
+                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,0,0,0">Seated Exercises</Button>
+                <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                    <TextBlock TextAlignment="Center" FontSize="17">
+                        Follow exercises that require full
+                        <LineBreak/>
+                        <Run Text="body involvement" />
+                    </TextBlock>
+                </Label>
+                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,0,0,0">Full Body Exercises</Button>
+            </Grid>
         </TabItem>
         <TabItem Header="Video" Width="195" >
-            <Label Content="Video" FontSize="30" HorizontalAlignment="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="198.5" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Video" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
+            </Grid>
         </TabItem>
         <TabItem Header="Audio" Width="195" >
-            <Label Content="Audio" FontSize="30" HorizontalAlignment="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Audio" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
+            </Grid>
         </TabItem>
         <TabItem Header="Start" Width="195" >
-            <Label Content="Start" FontSize="30" HorizontalAlignment="Center" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Selection" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
+            </Grid>
         </TabItem>
     </TabControl>
 </Window>
