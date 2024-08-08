@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Oasis_Prototype__WPF_"
         mc:Ignorable="d"
         Title="Oasis" Height="450" Width="800" Icon="/New Colored Icon.png">
-    <TabControl BorderBrush="Gainsboro" >
+    <TabControl BorderBrush="Gainsboro" Background="#CFCFCF">
         <TabControl.Resources>
             <Style TargetType="TabItem">
                 <Setter Property="Template">
@@ -21,10 +21,10 @@
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsSelected" Value="True">
-                                    <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    <Setter TargetName="Border" Property="Background" Value="#CFCFCF" />
                                 </Trigger>
                                 <Trigger Property="IsSelected" Value="False">
-                                    <Setter TargetName="Border" Property="Background" Value="Gray" />
+                                    <Setter TargetName="Border" Property="Background" Value="#BAB9BA" />
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
@@ -35,13 +35,12 @@
                 <Setter Property="HorizontalAlignment" Value="Center" />
             </Style>
         </TabControl.Resources>
-        <TabItem Header="Exercise" Width="195" >
+        <TabItem Header="Exercise" Width="195">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="265*" />
-                    <ColumnDefinition Width="41*" />
-                    <ColumnDefinition Width="224*"/>
-                    <ColumnDefinition Width="265*" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -49,37 +48,55 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Exercise" FontSize="30" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="35,0,0,0" />
-                <Label Grid.Column="0" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,101,0,0" Grid.RowSpan="2" >
+                <Label Content="Exercise" FontSize="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                <Label Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,101,0,0" Grid.RowSpan="2" >
                     <TextBlock TextAlignment="Center" FontSize="17">
                     Follow exercises that only focus 
                     <LineBreak/>
                     <Run Text="on breathing techniques" />
                     </TextBlock>
                 </Label>
-                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,101,0,0" Grid.RowSpan="2">Breathing Exercises</Button>
-                <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Breathing Exercises
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
                     <TextBlock TextAlignment="Center" FontSize="17">
                     Follow exercises that you can do
                     <LineBreak/>
                     <Run Text="while sitting in your chair" />
                     </TextBlock>
                 </Label>
-                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,0,0,0">Seated Exercises</Button>
-                <Label Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Seated Exercise
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
                     <TextBlock TextAlignment="Center" FontSize="17">
                         Follow exercises that require full
                         <LineBreak/>
                         <Run Text="body involvement" />
                     </TextBlock>
                 </Label>
-                <Button FontSize="17" Height="60" Width="210" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,0,0,0">Full Body Exercises</Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Full Body Exercises
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </Grid>
         </TabItem>
         <TabItem Header="Video" Width="195" >
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="198.5" />
+                    <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
                     <ColumnDefinition />
@@ -92,6 +109,99 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label Content="Video" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
+                <Border Height="140" Width="220" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="140,0,0,50">
+                    <MediaElement></MediaElement>
+                </Border>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Waves</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Fire</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Clouds</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Cave</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Stars</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="11" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Mountain</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Desert</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Iceberg</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Waterfall</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Swamp</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Flowers</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Canyon</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Bridge</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
+                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Temple</Button>
+                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <StackPanel>
+                        <Image Source="/Play Media Button.png"/>
+                    </StackPanel>
+                </Button>
             </Grid>
         </TabItem>
         <TabItem Header="Audio" Width="195" >
