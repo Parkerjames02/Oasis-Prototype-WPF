@@ -24,5 +24,22 @@ namespace Oasis_Prototype__WPF_
         {
             InitializeComponent();
         }
+
+        private void breathingExercisesbtn_Click(object sender, RoutedEventArgs e)
+        {
+            exerciseSelected.Text = "It Worked!";
+        }
+
+        private void wavesVideobtn_Click(object sender, RoutedEventArgs e)
+        {
+            videoSelected.Text = "It Worked! x2";
+            wavesVideobtn.IsEnabled = false;
+        }
+
+        private void whiteAudiobtn_Clicked(object sender, RoutedEventArgs e)
+        {
+            audioSelected.Text = "It Worked! x3";
+            whiteAudiobtn.IsEnabled = false;
+        }
     }
 }

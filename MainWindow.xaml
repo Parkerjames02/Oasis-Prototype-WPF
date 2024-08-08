@@ -56,7 +56,7 @@
                     <Run Text="on breathing techniques" />
                     </TextBlock>
                 </Label>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Breathing Exercises
+                <Button x:Name="breathingExercisesbtn" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="breathingExercisesbtn_Click">Breathing Exercises
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -112,7 +112,7 @@
                 <Border Height="140" Width="220" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="140,0,0,50">
                     <MediaElement></MediaElement>
                 </Border>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Waves</Button>
+                <Button x:Name="wavesVideobtn" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="wavesVideobtn_Click">Waves</Button>
                 <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
@@ -220,7 +220,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label Content="Audio" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">White</Button>
+                <Button x:Name="whiteAudiobtn" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="whiteAudiobtn_Clicked">White</Button>
                 <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
@@ -328,7 +328,45 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Selection" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
+                <Label Content="Start" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
+                <Border Background="White" Height="150" Width="400" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock.Inlines>
+                                <Run FontWeight="Bold" FontSize="20" Text="Exercise Selected:" />
+                                <Run x:Name="exerciseSelected" FontSize="20" Text="" />
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock.Inlines>
+                                <Run FontWeight="Bold" FontSize="20" Text="Video Selected:" />
+                                <Run x:Name="videoSelected" FontSize="20" Text="" />
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock.Inlines>
+                                <Run FontWeight="Bold" FontSize="20" Text="Audio Selected:" />
+                                <Run x:Name="audioSelected" FontSize="20" Text="" />
+                            </TextBlock.Inlines>
+                        </TextBlock>
+                    </Grid>
+                </Border>
+                <Button Height="60" Width="170" Grid.Column="1" Grid.Row="2" Background="White">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                    <TextBlock FontSize="30"  FontWeight="Bold">Start</TextBlock>
+                </Button>
             </Grid>
         </TabItem>
     </TabControl>
