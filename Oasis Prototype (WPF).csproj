@@ -106,5 +106,14 @@
   <ItemGroup>
     <Resource Include="Play Media Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images &amp; Icons\New Black Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="New Black Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images &amp; Icons\Arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

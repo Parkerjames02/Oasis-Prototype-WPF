@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oasis_Prototype__WPF_"
         mc:Ignorable="d"
-        Title="Oasis" Height="450" Width="800" Icon="/New Colored Icon.png">
-    <TabControl BorderBrush="Gainsboro" Background="#CFCFCF">
+        Title="Oasis" Height="450" Width="800" Icon="/New Black Icon.png">
+    <TabControl x:Name="mainTabControl" BorderBrush="Gainsboro" Background="#CFCFCF">
         <TabControl.Resources>
             <Style TargetType="TabItem">
                 <Setter Property="Template">
@@ -48,15 +48,11 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Exercise" FontSize="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                <Label x:Name="exerciseTitleLabel" Content="Exercise" FontSize="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
                 <Label Grid.Column="0" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,101,0,0" Grid.RowSpan="2" >
-                    <TextBlock TextAlignment="Center" FontSize="17">
-                    Follow exercises that only focus 
-                    <LineBreak/>
-                    <Run Text="on breathing techniques" />
-                    </TextBlock>
+                    <TextBlock x:Name="breathingExerciseDescriptiontextblock" TextAlignment="Center" FontSize="17">Follow exercises that only focus<LineBreak/><Run Text="on breathing techniques" /></TextBlock>
                 </Label>
-                <Button x:Name="breathingExercisesbtn" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="breathingExercisesbtn_Click">Breathing Exercises
+                <Button x:Name="breathingExercisesButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="breathingExercisesButton_Click">Breathing Exercises
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -64,13 +60,9 @@
                     </Button.Resources>
                 </Button>
                 <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
-                    <TextBlock TextAlignment="Center" FontSize="17">
-                    Follow exercises that you can do
-                    <LineBreak/>
-                    <Run Text="while sitting in your chair" />
-                    </TextBlock>
+                    <TextBlock x:Name="seatedExercisesDescriptiontextblock" TextAlignment="Center" FontSize="17">Follow exercises that you can do<LineBreak/><Run Text="while sitting in your chair" /></TextBlock>
                 </Label>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Seated Exercise
+                <Button x:Name="seatedExercisesButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="seatedExercisesButton_Click">Seated Exercises
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -78,13 +70,259 @@
                     </Button.Resources>
                 </Button>
                 <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
-                    <TextBlock TextAlignment="Center" FontSize="17">
-                        Follow exercises that require full
-                        <LineBreak/>
-                        <Run Text="body involvement" />
-                    </TextBlock>
+                    <TextBlock x:Name="fullBodyExercisesDescriptiontextblock" TextAlignment="Center" FontSize="17">Follow exercises that require full<LineBreak/><Run Text="body involvement" /></TextBlock>
                 </Label>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Full Body Exercises
+                <Button x:Name="fullBodyExercisesbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="fullBodyExercisesbutton_Click">Full Body Exercises
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Breathing Exercises" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label x:Name="breathingExercisesTitlelabel" Content="Breathing Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                <Button x:Name="deepBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Deep Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="sitaliBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Sitali Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="modifiedLionsBreathbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Modified Lions Breath
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="hummingBeeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Humming Bee Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="equalTimeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">
+                    <TextBlock TextAlignment="Center" FontSize="17">Equal Time For<LineBreak/><Run Text="Breathing In And Out" /></TextBlock>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="alternateNostrilBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Alternate Nostril Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="pusredLipBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Pursed Lip Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="resonantBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Resonant Breathing
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="backToExercisesbutton" FontSize="17" Background="White" Height="45" Width="90" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,0,0,0" Click="backToExercisesbutton_Click">
+                    <StackPanel>
+                        <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Seated Exercises" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label x:Name="seatedExercisesTitlelabel" Content="Seated Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">1
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">2
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">3
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">4
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">5
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">6
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">7
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">8
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="45" Width="90" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,0,0,0" Click="backToExercisesbutton_Click">
+                    <StackPanel>
+                        <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Full Body Exercises" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label x:Name="fullBodyExercisestitlelabel" Content="Full Body Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">1
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">2
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">3
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">4
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">5
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">6
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">7
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">8
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button FontSize="17" Background="White" Height="45" Width="90" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,0,0,0" Click="backToExercisesbutton_Click">
+                    <StackPanel>
+                        <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
+                    </StackPanel>
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -108,96 +346,261 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Video" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
+                <Label x:Name="videoTitleLabel" Content="Video" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
                 <Border Height="140" Width="220" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="140,0,0,50">
                     <MediaElement></MediaElement>
                 </Border>
-                <Button x:Name="wavesVideobtn" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="wavesVideobtn_Click">Waves</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="wavesVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="wavesVideoButton_Click">Waves
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="wavesVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Fire</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="fireVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Fire
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="fireVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Clouds</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="cloudsVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Clouds
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="cloudsVideoPreviewButton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Cave</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="caveVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Cave
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="caveVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Stars</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="starsVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Stars
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="starsVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="11" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Mountain</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="mountainVideoButton" FontSize="11" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Mountain
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="mountainVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Desert</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="desertVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Desert
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="desertVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Iceberg</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="icebergVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Iceberg
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="icebergVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="cityVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="cityVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Waterfall</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="waterfallVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Waterfall
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="waterfallVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Swamp</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="swampVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Swamp
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="swampVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Flowers</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="flowersVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Flowers
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="flowersVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Canyon</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="canyonVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Canyon
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="canyonVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Bridge</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="bridgeVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Bridge
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="bridgeVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Temple</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="templeVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Temple
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="templeVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
@@ -219,99 +622,275 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Audio" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
-                <Button x:Name="whiteAudiobtn" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="whiteAudiobtn_Clicked">White</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Label x:Name="audioTitleLabel" Content="Audio" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
+                <Button x:Name="whiteAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="whiteAudioButton_Click">White
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="whiteAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Pink</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="pinkAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Pink
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="pinkAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Wind</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="windAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Wind
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="windAudioPreviewButton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Rain</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="rainAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Rain
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="rainAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Birds</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="birdsAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Birds
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="birdsAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Crickets</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="cricketsAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Crickets
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="cricketsAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="10" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Whispering</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="whisperingAudioButton" FontSize="10" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Whispering
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="whisperingAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Clock</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="clockAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Clock
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="clockAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Theta</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="thetaAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Theta
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="thetaAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Bees</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="beesAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Bees
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="beesAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="cityAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="cityAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Ocean</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="oceanAudiobutton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Ocean
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="oceanAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Thunder</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="thunderAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Thunder
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="thunderAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Shop</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="shopAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Shop
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="shopAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Leaves</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="leavesAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Leaves
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="leavesAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Farm</Button>
-                <Button FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="farmAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Farm
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="farmAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                     <StackPanel>
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
@@ -328,7 +907,7 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Content="Start" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
+                <Label x:Name="startTitleLabel" Content="Start" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
                 <Border Background="White" Height="150" Width="400" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -342,24 +921,24 @@
                         <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Exercise Selected:" />
-                                <Run x:Name="exerciseSelected" FontSize="20" Text="" />
+                                <Run x:Name="exerciseSelectedTextblock" FontSize="20" Text="" />
                             </TextBlock.Inlines>
                         </TextBlock>
                         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Video Selected:" />
-                                <Run x:Name="videoSelected" FontSize="20" Text="" />
+                                <Run x:Name="videoSelectedTextblock" FontSize="20" Text="" />
                             </TextBlock.Inlines>
                         </TextBlock>
                         <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Audio Selected:" />
-                                <Run x:Name="audioSelected" FontSize="20" Text="" />
+                                <Run x:Name="audioSelectedTextblock" FontSize="20" Text="" />
                             </TextBlock.Inlines>
                         </TextBlock>
                     </Grid>
                 </Border>
-                <Button Height="60" Width="170" Grid.Column="1" Grid.Row="2" Background="White">
+                <Button x:Name="startButton" Height="60" Width="170" Grid.Column="1" Grid.Row="2" Background="White">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>

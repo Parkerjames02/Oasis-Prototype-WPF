@@ -25,21 +25,36 @@ namespace Oasis_Prototype__WPF_
             InitializeComponent();
         }
 
-        private void breathingExercisesbtn_Click(object sender, RoutedEventArgs e)
+        private void breathingExercisesButton_Click(object sender, RoutedEventArgs e)
         {
-            exerciseSelected.Text = "It Worked!";
+            mainTabControl.SelectedIndex = 1;
         }
 
-        private void wavesVideobtn_Click(object sender, RoutedEventArgs e)
+        private void seatedExercisesButton_Click(object sender, RoutedEventArgs e)
         {
-            videoSelected.Text = "It Worked! x2";
-            wavesVideobtn.IsEnabled = false;
+            mainTabControl.SelectedIndex = 2;
         }
 
-        private void whiteAudiobtn_Clicked(object sender, RoutedEventArgs e)
+        private void fullBodyExercisesbutton_Click(object sender, RoutedEventArgs e)
         {
-            audioSelected.Text = "It Worked! x3";
-            whiteAudiobtn.IsEnabled = false;
+            mainTabControl.SelectedIndex = 3;
+        }
+
+        private void backToExercisesbutton_Click(object sender, RoutedEventArgs e)
+        {
+            mainTabControl.SelectedIndex = 0;
+        }
+
+        private void wavesVideoButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void whiteAudioButton_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
+
+
