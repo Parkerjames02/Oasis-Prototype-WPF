@@ -96,14 +96,14 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label x:Name="breathingExercisesTitlelabel" Content="Breathing Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                <Button x:Name="deepBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Deep Breathing
+                <Button x:Name="deepBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="deepBreathingButton_Click">Deep Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="sitaliBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Sitali Breathing
+                <Button x:Name="sitaliBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="sitaliBreathingButton_Click">Sitali Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -630,14 +630,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="whiteAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="whiteAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0" Click="whiteAudioPreviewbutton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image x:Name="whiteAudioPreviewimage" Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="pinkAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Pink
@@ -817,14 +817,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="oceanAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="oceanAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0" Click="oceanAudioPreviewbutton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image x:Name="oceanAudioPreviewimage" Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="thunderAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Thunder
