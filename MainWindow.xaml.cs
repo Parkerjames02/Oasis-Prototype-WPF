@@ -74,11 +74,32 @@ namespace Oasis_Prototype__WPF_
         }
         // Seated exercise buttons
         // Full body exercise buttons
+        // Re-enable all video selection buttons
+        private void reenableVideoButtons()
+        {
+            wavesVideoButton.IsEnabled = true;
+            fireVideoButton.IsEnabled = true;
+        }
+        // Re-enable all video preview buttons
+        // Video selection buttons
         private void wavesVideoButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            videoSelectedTextblock.Text = "Waves";
+            reenableVideoButtons();
+            wavesVideoButton.IsEnabled = false;
+        }
+        private void fireVideoButton_Click(object sender, RoutedEventArgs e)
+        {
+            videoSelectedTextblock.Text = "Fire";
+            reenableVideoButtons();
+            fireVideoButton.IsEnabled = false;
         }
         // Re-enable all audio selection buttons
+        private void reenableAudioButtons()
+        {
+            whiteAudioButton.IsEnabled = true;
+            pinkAudioButton.IsEnabled = true;
+        }
         // Re-enable all audio preview buttons
         private void reenableAudioPreviewbuttons()
         {
@@ -87,9 +108,12 @@ namespace Oasis_Prototype__WPF_
             oceanAudioPreviewimage.Source = new BitmapImage(new Uri("Resources/Images & Icons/Play Media Button.png", UriKind.RelativeOrAbsolute));
             oceanAudioStatus = 0;
         }
+        // Audio selection buttons
         private void whiteAudioButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            audioSelectedTextblock.Text = "White Noise";
+            reenableAudioButtons();
+            whiteAudioButton.IsEnabled = false;
         }
         private void whiteAudioPreviewbutton_Click(object sender, RoutedEventArgs e)
         {
@@ -109,6 +133,12 @@ namespace Oasis_Prototype__WPF_
                 whiteAudioPreviewimage.Source = new BitmapImage(new Uri("Resources/Images & Icons/Play Media Button.png", UriKind.RelativeOrAbsolute));
                 whiteAudioStatus = 0;
             }
+        }
+        private void pinkAudioButton_Click(object sender, RoutedEventArgs e)
+        {
+            audioSelectedTextblock.Text = "Pink Noise";
+            reenableAudioButtons();
+            pinkAudioButton.IsEnabled = false;
         }
         private void oceanAudioPreviewbutton_Click(object sender, RoutedEventArgs e)
         {

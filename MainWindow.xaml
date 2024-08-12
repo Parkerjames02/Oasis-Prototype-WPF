@@ -367,7 +367,7 @@
                         <Image Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="fireVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Fire
+                <Button x:Name="fireVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="fireVideoButton_Click">Fire
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -640,7 +640,7 @@
                         <Image x:Name="whiteAudioPreviewimage" Source="/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="pinkAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Pink
+                <Button x:Name="pinkAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="pinkAudioButton_Click">Pink
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
