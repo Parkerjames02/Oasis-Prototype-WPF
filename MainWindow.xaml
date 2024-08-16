@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Oasis_Prototype__WPF_"
         mc:Ignorable="d"
-        Title="Oasis" Height="450" Width="800" Icon="/New Black Icon.png">
+        Title="Oasis" Height="450" Width="800" Icon="/Resources/Images &amp; Icons/New Black Icon.png">
+    <!-- Updated (8/16/2024) -->
     <TabControl x:Name="mainTabControl" BorderBrush="Gainsboro" Background="#CFCFCF">
         <TabControl.Resources>
             <Style TargetType="TabItem">
@@ -35,7 +36,7 @@
                 <Setter Property="HorizontalAlignment" Value="Center" />
             </Style>
         </TabControl.Resources>
-        <TabItem Header="Exercise" Width="195">
+        <TabItem x:Name="exerciseTab" Header="Exercise" Width="195">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -81,7 +82,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Breathing Exercises" Visibility="Collapsed">
+        <TabItem x:Name="breathingExerciseTab" Header="Breathing Exercises" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -165,7 +166,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Seated Exercises" Visibility="Collapsed">
+        <TabItem x:Name="SeatedExerciseTab" Header="Seated Exercises" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -248,7 +249,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Full Body Exercises" Visibility="Collapsed">
+        <TabItem x:Name="fullBodyExercisetab" Header="Full Body Exercises" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -331,7 +332,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Video" Width="195" >
+        <TabItem x:Name="videoTab" Header="Video" Width="195" >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -348,7 +349,7 @@
                 </Grid.RowDefinitions>
                 <Label x:Name="videoTitleLabel" Content="Video" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,17,0,0" />
                 <Border Height="140" Width="220" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="140,0,0,50">
-                    <MediaElement></MediaElement>
+                    <MediaElement x:Name="previewVideo" LoadedBehavior="Manual" MediaEnded="previewVideo_MediaEnded"></MediaElement>
                 </Border>
                 <Button x:Name="wavesVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="wavesVideoButton_Click">Waves
                     <Button.Resources>
@@ -357,14 +358,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="wavesVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0">
+                <Button x:Name="wavesVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="76,0,0,0" Click="wavesVideoPreviewbutton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image x:Name="wavesVideoPreviewimage" Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="fireVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="fireVideoButton_Click">Fire
@@ -374,14 +375,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="fireVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="fireVideoPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0" Click="fireVideoPreviewbutton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image x:Name="fireVideoPreviewimage" Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="cloudsVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Clouds
@@ -398,7 +399,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="caveVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Cave
@@ -415,7 +416,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="starsVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Stars
@@ -432,7 +433,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="mountainVideoButton" FontSize="11" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Mountain
@@ -449,7 +450,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="desertVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Desert
@@ -466,7 +467,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="icebergVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Iceberg
@@ -483,7 +484,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="cityVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City
@@ -500,7 +501,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="waterfallVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Waterfall
@@ -517,7 +518,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="swampVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Swamp
@@ -534,7 +535,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="flowersVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Flowers
@@ -551,7 +552,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="canyonVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Canyon
@@ -568,7 +569,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="bridgeVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Bridge
@@ -585,7 +586,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="templeVideoButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Temple
@@ -602,12 +603,12 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Audio" Width="195" >
+        <TabItem x:Name="audioTab" Header="Audio" Width="195" >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -637,7 +638,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image x:Name="whiteAudioPreviewimage" Source="/Play Media Button.png"/>
+                        <Image x:Name="whiteAudioPreviewimage" Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="pinkAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="pinkAudioButton_Click">Pink
@@ -647,14 +648,14 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="pinkAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0">
+                <Button x:Name="pinkAudioPreviewbutton" FontSize="12" Background="White" Height="20" Width="20" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="75,0,0,0" Click="pinkAudioPreviewbutton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image x:Name="pinkAudioPreviewimage" Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="windAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Wind
@@ -671,7 +672,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="rainAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Rain
@@ -688,7 +689,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="birdsAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Birds
@@ -705,7 +706,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="cricketsAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Crickets
@@ -722,7 +723,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="whisperingAudioButton" FontSize="10" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Whispering
@@ -739,7 +740,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="clockAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Clock
@@ -756,7 +757,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="thetaAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Theta
@@ -773,7 +774,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="beesAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Bees
@@ -790,7 +791,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="cityAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">City
@@ -807,10 +808,10 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
-                <Button x:Name="oceanAudiobutton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Ocean
+                <Button x:Name="oceanAudiobutton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Click="oceanAudioButton_Click">Ocean
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -824,7 +825,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image x:Name="oceanAudioPreviewimage" Source="/Play Media Button.png"/>
+                        <Image x:Name="oceanAudioPreviewimage" Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="thunderAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Thunder
@@ -841,7 +842,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="shopAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Shop
@@ -858,7 +859,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="leavesAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Leaves
@@ -875,7 +876,7 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="farmAudioButton" FontSize="12" Background="White" Height="20" Width="55" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Farm
@@ -892,12 +893,12 @@
                         </Style>
                     </Button.Resources>
                     <StackPanel>
-                        <Image Source="/Play Media Button.png"/>
+                        <Image Source="/Resources/Images &amp; Icons/Play Media Button.png"/>
                     </StackPanel>
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem Header="Start" Width="195" >
+        <TabItem x:Name="startTab" Header="Start" Width="195" >
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -906,9 +907,10 @@
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label x:Name="startTitleLabel" Content="Start" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
-                <Border Background="White" Height="150" Width="400" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
+                <Border Background="White" BorderBrush="DarkGray" BorderThickness="0.7" Height="150" Width="400" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,25,0,0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -921,30 +923,91 @@
                         <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Exercise Selected:" />
-                                <Run x:Name="exerciseSelectedTextblock" FontSize="20" Text="" />
+                                <Run x:Name="exerciseSelectedTextblock" FontSize="20" Text="None" />
                             </TextBlock.Inlines>
                         </TextBlock>
                         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Video Selected:" />
-                                <Run x:Name="videoSelectedTextblock" FontSize="20" Text="" />
+                                <Run x:Name="videoSelectedTextblock" FontSize="20" Text="None" />
                             </TextBlock.Inlines>
                         </TextBlock>
                         <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock.Inlines>
                                 <Run FontWeight="Bold" FontSize="20" Text="Audio Selected:" />
-                                <Run x:Name="audioSelectedTextblock" FontSize="20" Text="" />
+                                <Run x:Name="audioSelectedTextblock" FontSize="20" Text="None" />
                             </TextBlock.Inlines>
                         </TextBlock>
                     </Grid>
                 </Border>
-                <Button x:Name="startButton" Height="60" Width="170" Grid.Column="1" Grid.Row="2" Background="White">
+                <Border Height="40" Width="400" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Margin="0,25,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Button x:Name="resetExerciseButton" Height="30" Width="120" Content="Reset Exercise" Background="White" Grid.Column="0" Click="resetExerciseButton_Click">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="resetVideoButton" Height="30" Width="120" Content="Reset Video" Background="White" Grid.Column="1" Click="resetVideoButton_Click">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="resetAudioButton" Height="30" Width="120" Content="Reset Audio" Background="White" Grid.Column="2" Click="resetAudioButton_Click">
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                </Border>
+                <Button x:Name="startButton" Height="60" Width="170" Grid.Column="1" Grid.Row="3" Background="White" Click="startButton_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <TextBlock FontSize="30"  FontWeight="Bold">Start</TextBlock>
+                </Button>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="customExperienceTab" Visibility="Collapsed">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Height="372" Width="780" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
+                    <MediaElement x:Name="playVideo" LoadedBehavior="Manual" MediaEnded="playVideo_MediaEnded"></MediaElement>
+                </Border>
+                <Rectangle x:Name="exerciseInsturctionsBackground" Height="40" Width="720" Grid.Row="1" Fill="White" Opacity="0.60" Margin="0,65,0,0"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Margin="0,115,0,0">
+                    <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="25"/>
+                </TextBlock>
+                <Button x:Name="backToMainbutton" FontSize="17" Background="White" Height="30" Width="60" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="backToMainbutton_Click">
+                    <StackPanel>
+                        <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
+                    </StackPanel>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
                 </Button>
             </Grid>
         </TabItem>

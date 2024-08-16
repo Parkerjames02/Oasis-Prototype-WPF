@@ -98,28 +98,28 @@
     <Resource Include="Resources\Images &amp; Icons\New Colored Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="New Colored Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Images &amp; Icons\Play Media Button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Play Media Button.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images &amp; Icons\New Black Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="New Black Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Images &amp; Icons\Arrow.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Audio\Pink Audio.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Audio\White Audio.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Audio\Ocean Audio.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Video\Fire Video.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Video\Waves Video.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\Images &amp; Icons\Stop Media Button.png" />
