@@ -82,7 +82,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem x:Name="breathingExerciseTab" Header="Breathing Exercises" Visibility="Collapsed">
+        <TabItem x:Name="breathingExerciseTab" Header="Breathing Exercises" Width="195" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -111,43 +111,42 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="modifiedLionsBreathbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Modified Lions Breath
+                <Button x:Name="modifiedLionsBreathbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="modifiedLionsBreathbutton_Click">Modified Lions Breath
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="hummingBeeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Humming Bee Breathing
+                <Button x:Name="hummingBeeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="hummingBeeBreathingbutton_Click">Humming Bee Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="equalTimeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">
-                    <TextBlock TextAlignment="Center" FontSize="17">Equal Time For<LineBreak/><Run Text="Breathing In And Out" /></TextBlock>
+                <Button x:Name="equalTimeBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="equalTimeBreathingbutton_Click">Equal Time Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="alternateNostrilBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Alternate Nostril Breathing
+                <Button x:Name="alternateNostrilBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="alternateNostrilBreathingbutton_Click">Alternate Nostril Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="pusredLipBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">Pursed Lip Breathing
+                <Button x:Name="pursedLipBreathingbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="pursedLipBreathingbutton_Click">Pursed Lip Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button x:Name="resonantBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">Resonant Breathing
+                <Button x:Name="resonantBreathingButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="resonantBreathingButton_Click">Resonant Breathing
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -166,7 +165,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem x:Name="SeatedExerciseTab" Header="Seated Exercises" Visibility="Collapsed">
+        <TabItem x:Name="seatedExerciseTab" Header="Seated Exercises" Width="195" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -181,56 +180,70 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label x:Name="seatedExercisesTitlelabel" Content="Seated Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">1
+                <Button x:Name="seatedSpinalTwistbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="seatedSpinalTwistbutton_Click">Seated Spinal Twist
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">2
+                <Button x:Name="tricepsStretchesButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="tricepsStretchesButton_Click">Triceps Stretches
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">3
+                <Button x:Name="shoulderPectoralStretchbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="shoulderPectoralStretchbutton_Click">
+                    <TextBlock TextAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="Shoulder &amp;"/>
+                            <LineBreak/>
+                            <Run Text="Pectoral Stretch"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">4
+                <Button x:Name="hipKneeStretchbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="hipKneeStretchbutton_Click">
+                    <TextBlock TextAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="Hip &amp; Knee"/>
+                            <LineBreak/>
+                            <Run Text="Flexion Stretch"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">5
+                <Button x:Name="shoulderShrugButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="shoulderShrugButton_Click">Shoulder Shrug
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">6
+                <Button x:Name="neckStretchesButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="neckStretchesButton_Click">Neck Stretches
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">7
+                <Button x:Name="seatedLeanBacksbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="seatedLeanBacksbutton_Click">Seated Lean Backs
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">8
+                <Button x:Name="seatedHipStretchbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="seatedHipStretchbutton_Click">Seated Hip Stretch
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -249,7 +262,7 @@
                 </Button>
             </Grid>
         </TabItem>
-        <TabItem x:Name="fullBodyExercisetab" Header="Full Body Exercises" Visibility="Collapsed">
+        <TabItem x:Name="fullBodyExercisetab" Header="Full Body Exercises" Width="195" Visibility="Collapsed">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -264,56 +277,63 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label x:Name="fullBodyExercisestitlelabel" Content="Full Body Exercises" FontSize="30" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">1
+                <Button x:Name="childsPoseButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="childsPoseButton_Click">Child's Pose
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">2
+                <Button x:Name="catCowButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="catCowButton_Click">Cat-Cow
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">3
+                <Button x:Name="puppyPoseButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="puppyPoseButton_Click">Puppy Pose
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">4
+                <Button x:Name="lungingHipFlexorbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="lungingHipFlexorbutton_Click">
+                    <TextBlock TextAlignment="Center">
+                        <TextBlock.Inlines>
+                            <Run Text="Lunging"/>
+                            <LineBreak/>
+                            <Run Text="Hip-Flexor Stretch"/>
+                        </TextBlock.Inlines>
+                    </TextBlock>
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">5
+                <Button x:Name="downwardFacingDogbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="downwardFacingDogbutton_Click">Downward Facing Dog
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">6
+                <Button x:Name="forwardFoldButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="forwardFoldButton_Click">Forward Fold
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0">7
+                <Button x:Name="pigeonPoseButton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,12,0" Click="pigeonPoseButton_Click">Pigeon Pose
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                 </Button>
-                <Button FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0">8
+                <Button x:Name="lowerTrunkRotationbutton" FontSize="17" Background="White" Height="60" Width="210" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,0,0,0" Click="lowerTrunkRotationbutton_Click">Lower Trunk Rotation
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -910,7 +930,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Label x:Name="startTitleLabel" Content="Start" FontSize="30" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,35"/>
-                <Border Background="White" BorderBrush="DarkGray" BorderThickness="0.7" Height="150" Width="400" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,25,0,0">
+                <Border Background="White" BorderBrush="DarkGray" BorderThickness="0.7" Height="150" Width="430" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,25,0,0">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -995,9 +1015,9 @@
                 <Border Height="372" Width="780" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
                     <MediaElement x:Name="playVideo" LoadedBehavior="Manual" MediaEnded="playVideo_MediaEnded"></MediaElement>
                 </Border>
-                <Rectangle x:Name="exerciseInsturctionsBackground" Height="40" Width="720" Grid.Row="1" Fill="White" Opacity="0.60" Margin="0,65,0,0"/>
+                <Rectangle x:Name="exerciseInsturctionsBackground" Height="40" Width="772" Grid.Row="1" Fill="White" Opacity="0.60" Margin="0,65,0,0"/>
                 <TextBlock Grid.Row="1" HorizontalAlignment="Center" Margin="0,115,0,0">
-                    <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="25"/>
+                    <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="22"/>
                 </TextBlock>
                 <Button x:Name="backToMainbutton" FontSize="17" Background="White" Height="30" Width="60" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="backToMainbutton_Click">
                     <StackPanel>
