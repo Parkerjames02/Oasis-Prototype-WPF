@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Oasis_Prototype__WPF_"
         mc:Ignorable="d"
         Title="Oasis" Height="450" Width="800" Icon="/Resources/Images &amp; Icons/New Black Icon.png">
-    <!-- Updated (8/16/2024) -->
+    <!-- Updated (3/14/2025) -->
     <Viewbox MinHeight="400" MinWidth="800">
         <TabControl x:Name="mainTabControl" BorderBrush="Gainsboro" Background="#CFCFCF" MinHeight="435" MinWidth="830">
             <TabControl.Resources>
@@ -1016,10 +1016,11 @@
                     <Border MinHeight="395" MinWidth="825" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
                         <MediaElement x:Name="playVideo" LoadedBehavior="Manual" MediaEnded="playVideo_MediaEnded"></MediaElement>
                     </Border>
-                    <Rectangle x:Name="exerciseInsturctionsBackground" Height="40" Width="772" Grid.Row="1" Fill="White" Opacity="0.60" Margin="0,65,0,0"/>
-                    <TextBlock Grid.Row="1" HorizontalAlignment="Center" Margin="0,115,0,0">
-                    <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="22"/>
-                    </TextBlock>
+                    <Border x:Name="exerciseInsturctionsBackground" Height="40" Width="819" Grid.Row="1" Background="White" Opacity="0.60">
+                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Margin="0,4,0,0">
+                            <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="22"/>
+                        </TextBlock>
+                    </Border>
                     <Button x:Name="backToMainbutton" FontSize="17" Background="White" Height="30" Width="60" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="backToMainbutton_Click">
                         <StackPanel>
                             <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
