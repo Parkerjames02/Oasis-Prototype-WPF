@@ -1013,7 +1013,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Border MinHeight="395" MinWidth="825" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
+                    <Border Height="395" Width="825" Background="#464646" BorderBrush="#FEFEFE" BorderThickness="3" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,30">
                         <MediaElement x:Name="playVideo" LoadedBehavior="Manual" MediaEnded="playVideo_MediaEnded"></MediaElement>
                     </Border>
                     <Border x:Name="exerciseInsturctionsBackground" Height="40" Width="819" Grid.Row="1" Background="White" Opacity="0.60">
@@ -1021,9 +1021,9 @@
                             <Run x:Name="exerciseInsturctionsText" Foreground="Black" FontSize="22"/>
                         </TextBlock>
                     </Border>
-                    <Button x:Name="backToMainbutton" FontSize="17" Background="White" Height="30" Width="60" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="backToMainbutton_Click">
+                    <Button x:Name="backToMainbutton" FontSize="17" Background="White" MinHeight="30" MinWidth="60" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="backToMainbutton_Click">
                         <StackPanel>
-                            <Image Source="/Resources/Images &amp; Icons/Arrow.png" Height="20" />
+                            <Image Source="/Resources/Images &amp; Icons/Arrow.png" MaxHeight="20" />
                         </StackPanel>
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
