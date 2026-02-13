@@ -7,7 +7,7 @@ As of February 13th, 2026 I am currently working on the official version of Oasi
 - C#
 - XAML
 - WPF (.NET)
-- .mp4 (Video
+- .mp4 (Video)
 - .wav (Audio)
 ## 🚀 Features
 - Allows the user to select a stress relief exercise guide.
