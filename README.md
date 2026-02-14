@@ -22,7 +22,7 @@ be innovative and thats when I landed on my favorite idea, Oasis. I have always 
 to create something that could potentially help myself as well as others. I also noticed that not only are there very few stress
 relief applications on desktop systems but they can also feel a bit restrictive. Thats when I came up with Oasis, an appliation
 made for desktop PCs that allows the user to create their own custom stress relief experience that best suits them.
-## 👀 Preview
+## 👀 Video
 <ins>_Please use CTRL+click on thumbnail below to open in a new tab_</ins>
 
 [![Oasis SIP Showcae Video](https://github.com/user-attachments/assets/84a993b2-cce7-4162-a6d5-2e9c354f14f0)](https://www.youtube.com/watch?v=yp_XNBOB1W4&t=1s)
